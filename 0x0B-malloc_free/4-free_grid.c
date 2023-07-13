@@ -1,7 +1,5 @@
 #include <stdio.h>
-		
 #include <stdlib.h>
-		
 #include "main.h"
 		
 /**
@@ -23,19 +21,15 @@
 void free_grid(int **grid, int height)
 		
 {
-		
-	int i;
-		
+	int y;
 
-		
-	for (i = 0; i < height; i++)
-		
+	if (grid == NULL || grid == 0)
 	{
-		
-		free(grid[i]);
-		
+		return;
 	}
-		
-	free(grid);
-		
+	for (y = 0; y < height;  y++)
+	{
+		free(grid[y]);
+	}
+	free(grid)
 }
